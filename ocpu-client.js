@@ -144,7 +144,7 @@ if(!window.jQuery) {
     handler = handler || function(){};
 
     //set global settings
-    settings.url = settings.url || (r_path.href + "/" + fun);
+    settings.url = (settings.url || (r_path.href + "/" + fun)).replace('http://','https://');
     settings.type = settings.type || "POST";
     settings.data = settings.data || {};
     settings.dataType = settings.dataType || "text";
